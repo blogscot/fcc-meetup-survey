@@ -1,3 +1,5 @@
+// TODO: fix for Firefox mobiles devices
+
 * {
   // border: rgba(40, 40, 40, 0.3) solid 1px;
   box-sizing: border-box;
@@ -6,7 +8,7 @@
 }
 
 body {
-  background-color: hsl(174, 90%, 91%);
+  background-color: hsl(208, 80%, 90%);
 }
 
 #title {
@@ -52,6 +54,9 @@ form {
       margin-left: 0;
       font-size: var(--text-size);
       border: solid 1px #aaa;
+      border-radius: 4px;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     }
   }
 
@@ -70,16 +75,20 @@ form {
     grid-template-columns: 170px 1fr;
     align-items: center;
 
-    label {
-      text-align: start;
-      margin-right: 10px;
+    #radio-labels {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      align-items: center;
     }
 
     #dropdown-label {
       align-self: center;
+      margin-left: 30px;
     }
 
     #dropdown {
+      border-radius: 4px;
+      border: 1px solid #ccc;
       font-size: var(--text-size);
       height: 1.8rem;
       margin: 4px 0 6px 0;
@@ -99,8 +108,11 @@ form {
       grid-template-columns: 200px 1fr;
 
       label {
-        text-align: end;
-        margin-right: 10px;
+        margin-left: 10px;
+      }
+
+      #radio-description {
+        margin-left: 30px;
       }
     }
   }
@@ -119,11 +131,17 @@ form {
       margin-top: 16px;
       margin-right: 10px;
       padding: 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      line-height: 1.43;
     }
 
     button {
-      background-color: hsl(174, 76%, 74%);
+      background-color: hsl(208, 56%, 46%);
+      border: 1px solid transparent;
+      border-color: hsl(208, 56%, 46%);
       border-radius: 4px;
+      color: #fff;
       font-family: Arial, Helvetica, sans-serif;
       font-size: var(--text-size);
       margin: 8px 0;
@@ -137,7 +155,7 @@ form {
       grid-template-columns: 200px 1fr;
 
       label {
-        padding: 0 4px 0 33%;
+        margin-left: 30px;
       }
 
       textarea {
