@@ -153,6 +153,10 @@ form {
       padding: 8px;
       width: 25%;
     }
+
+    button:hover {
+      background-color: hsl(208, 56%, 52%)
+    }
   }
 
   @media screen and (min-width: 700px) {
