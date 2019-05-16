@@ -22,7 +22,7 @@ main > #description {
 }
 
 form {
-  --text-size: 0.8rem;
+  --text-size: 1rem;
   background-color: #fff;
   border: rgba(40, 40, 40, 0.3) solid 1px;
   border-radius: 8px;
@@ -32,37 +32,45 @@ form {
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 32px;
-  grid-auto-rows: 32px;
-  grid-row-gap: 6px;
+  grid-template-rows: repeat(14, 32px);
+  grid-auto-rows: 40px;
+  grid-row-gap: 8px;
 
   @media screen and (min-width: 450px) {
     max-width: 600px;
-    min-height: 600px;
   }
 
   label {
     grid-column: 1 / 6;
     justify-self: flex-end;
+    align-self: center;
     margin-right: 8px;
   }
 
   input,
   textarea {
     grid-column: 6 / -1;
+    font-size: 14px;
+    padding-left: 6px;
   }
 
   select {
     grid-column: 6 / 10;
+    font-size: 14px;
   }
 
   #radio-description {
     grid-column: 1 / 6;
+    justify-self: flex-start;
+    align-self: center;
+    padding-right: 1rem;
   }
 
   input[type='radio'],
   input[type='checkbox'] {
     grid-column: 6 / 7;
+    justify-self: flex-start;
+    align-self: center;
   }
 
   #radio-label,
@@ -70,13 +78,25 @@ form {
     grid-column: 7 / -1;
     justify-self: flex-start;
     align-self: center;
+    margin-left: -24px;
+  }
+
+  #textarea-label {
+    justify-self: flex-start;
+    padding-right: 1rem;
   }
 
   textarea {
     grid-row: 11 / 15;
+    border-radius: 4px;
+    padding: 6px;
   }
 
-  button {
-    grid-column: 6 / 7;
+  button[type='submit'] {
+    grid-column: 6 / 8;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 6px;
+    align-self: center;
   }
 }
