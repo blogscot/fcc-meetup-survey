@@ -31,7 +31,7 @@ form {
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(14, 32px);
+  grid-template-rows: repeat(4, 32px) repeat(6, 22px) repeat(4, 32px);
   grid-auto-rows: 40px;
   grid-row-gap: 8px;
 
