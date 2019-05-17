@@ -72,8 +72,14 @@ form {
   }
 
   select {
-    grid-column: 6 / span 4;
+    grid-column: 5 / span 4;
     font-size: 14px;
+  }
+
+  @media screen and (min-width: 450px) {
+    select {
+      grid-column: 6 / span 4;
+    }
   }
 
   #checkbox-description,
