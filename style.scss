@@ -19,11 +19,9 @@ main > #description {
 }
 
 form {
-  background-color: #fff;
-  border: rgba(40, 40, 40, 0.3) solid 1px;
   font-family: 'Times New Roman', Times, serif;
   margin: 2rem auto;
-  padding: 0.8rem;
+  padding: 2rem 0.8rem;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -32,6 +30,8 @@ form {
   grid-row-gap: 8px;
 
   @media screen and (min-width: 450px) {
+    border: rgba(40, 40, 40, 0.3) solid 1px;
+    background-color: #fff;
     max-width: 600px;
     padding: 1rem 1.6rem;
     border-radius: 8px;
