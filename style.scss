@@ -1,7 +1,4 @@
-// TODO: fix for Firefox mobiles devices
-
 * {
-  // border: rgba(40, 40, 40, 0.3) solid 1px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -22,7 +19,6 @@ main > #description {
 }
 
 form {
-  --text-size: 1rem;
   background-color: #fff;
   border: rgba(40, 40, 40, 0.3) solid 1px;
   font-family: 'Times New Roman', Times, serif;
@@ -76,7 +72,7 @@ form {
   }
 
   select {
-    grid-column: 6 / 10;
+    grid-column: 6 / span 4;
     font-size: 14px;
   }
 
@@ -89,23 +85,23 @@ form {
   }
 
   #radio-description {
-    grid-row: 5 / 9;
+    grid-row: 5 / span 4;
   }
 
   #checkbox-description {
-    grid-row: 9 / 11;
+    grid-row: 9 / span 2;
   }
 
   @media screen and (min-width: 450px) {
     #checkbox-description,
     #radio-description {
-      grid-column: 1 / 6;
+      grid-column: 1 / span 5;
     }
   }
 
   input[type='radio'],
   input[type='checkbox'] {
-    grid-column: 5 / 6;
+    grid-column: 5;
     justify-self: flex-start;
     align-self: center;
   }
@@ -113,7 +109,7 @@ form {
   @media screen and (min-width: 450px) {
     input[type='radio'],
     input[type='checkbox'] {
-      grid-column: 6 / 7;
+      grid-column: 6;
     }
   }
 
@@ -133,7 +129,7 @@ form {
   }
 
   #textarea-label {
-    grid-row: 11 / 15;
+    grid-row: 11 / span 4;
     justify-self: flex-start;
     align-self: center;
   }
@@ -145,14 +141,14 @@ form {
   }
 
   textarea {
-    grid-row: 11 / 15;
+    grid-row: 11 / span 4;
     border-radius: 4px;
     padding: 6px;
     width: 100%; // required by Firefox
   }
 
   button[type='submit'] {
-    grid-column: 5 / 8;
+    grid-column: 5 / span 3;
     border-radius: 4px;
     font-size: 16px;
     padding: 6px;
@@ -161,7 +157,7 @@ form {
 
   @media screen and (min-width: 450px) {
     button[type='submit'] {
-      grid-column: 6 / 8;
+      grid-column: 6 / span 2;
     }
   }
 }
