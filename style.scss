@@ -6,6 +6,8 @@
 
 body {
   background-color: hsl(208, 80%, 90%);
+  display: grid;
+  justify-content: center;
 }
 
 header {
@@ -28,118 +30,25 @@ header {
 }
 
 form {
+  background-color: #fff;
   font-family: 'Roboto', 'Times New Roman', Times, serif;
   padding: 0;
   @media screen and (min-width: 450px) {
+    border: rgba(40, 40, 40, 0.3) solid 1px;
+    border-radius: 8px;
+    margin: 2rem;
+    max-width: 600px;
     padding: 0 1.2rem;
-  }
-
-  section {
-    #checkbox-description,
-    #radio-description {
-      grid-column: 1 / 5;
-      justify-self: flex-start;
-      align-self: center;
-      padding-right: 1rem;
-    }
-
-    #radio-description {
-      grid-row: 5 / span 4;
-    }
-
-    #checkbox-description {
-      grid-row: 9 / span 2;
-    }
-
-    @media screen and (min-width: 450px) {
-      #checkbox-description,
-      #radio-description {
-        grid-column: 1 / span 5;
-      }
-    }
-
-    input[type='radio'],
-    input[type='checkbox'] {
-      grid-column: 5;
-      justify-self: flex-start;
-      align-self: center;
-    }
-
-    @media screen and (min-width: 450px) {
-      input[type='radio'],
-      input[type='checkbox'] {
-        grid-column: 6;
-      }
-    }
-
-    #radio-label,
-    #checkbox-label {
-      grid-column: 7 / -1;
-      justify-self: flex-start;
-      align-self: center;
-      margin-left: -10px;
-    }
-
-    @media screen and (min-width: 450px) {
-      #radio-label,
-      #checkbox-label {
-        grid-column: 7 / -1;
-      }
-    }
-  }
-
-  #textarea-label {
-    grid-row: 11 / span 4;
-    justify-self: flex-start;
-    align-self: center;
-  }
-
-  @media screen and (min-width: 450px) {
-    #textarea-label {
-      padding-right: 1rem;
-    }
-  }
-
-  textarea {
-    grid-row: 11 / span 4;
-    border-radius: 4px;
-    padding: 6px;
-    width: 100%; // required by Firefox
-  }
-
-  button[type='submit'] {
-    grid-column: 5 / span 3;
-    border-radius: 4px;
-    font-size: 16px;
-    padding: 6px;
-    align-self: center;
-  }
-
-  @media screen and (min-width: 450px) {
-    button[type='submit'] {
-      grid-column: 6 / span 2;
-    }
   }
 }
 
 // Contact Info
 
-section:not(#contact-info) {
-  visibility: hidden;
-}
-
 #contact-info {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-row-gap: 12px;
-  background-color: #fff;
-  padding: 1rem 1.6rem;
-  @media screen and (min-width: 450px) {
-    max-width: 600px;
-    margin: 2rem auto;
-    border: rgba(40, 40, 40, 0.3) solid 1px;
-    border-radius: 8px;
-  }
+  padding: 2rem 1.6rem 1rem 1.6rem;
 
   label {
     grid-column: 1 / 6;
@@ -176,5 +85,106 @@ section:not(#contact-info) {
     grid-column: 6 / -1;
     font-size: 14px;
     height: 2rem;
+  }
+}
+
+// User Choices
+
+#user-choices {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-row-gap: 12px;
+  #checkbox-description,
+  #radio-description {
+    grid-column: 1 / 5;
+    justify-self: flex-start;
+    align-self: center;
+    padding-right: 1rem;
+  }
+
+  #radio-description {
+    grid-row: 1 / span 4;
+  }
+
+  #checkbox-description {
+    grid-row: 5 / span 2;
+  }
+
+  @media screen and (min-width: 450px) {
+    #checkbox-description,
+    #radio-description {
+      grid-column: 2 / span 4;
+    }
+  }
+
+  input[type='radio'],
+  input[type='checkbox'] {
+    grid-column: 5;
+    justify-self: flex-start;
+    align-self: center;
+  }
+
+  @media screen and (min-width: 450px) {
+    input[type='radio'],
+    input[type='checkbox'] {
+      grid-column: 6;
+    }
+  }
+
+  #radio-label,
+  #checkbox-label {
+    grid-column: 7 / -1;
+    justify-self: flex-start;
+    align-self: center;
+    margin-left: -10px;
+  }
+
+  @media screen and (min-width: 450px) {
+    #radio-label,
+    #checkbox-label {
+      grid-column: 7 / -1;
+    }
+  }
+}
+
+// User comments
+
+#user-comments {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-row-gap: 12px;
+  padding-bottom: 2rem;
+  #textarea-label {
+    grid-column: 2 / span 4;
+    justify-self: flex-start;
+    align-self: center;
+  }
+
+  @media screen and (min-width: 450px) {
+    #textarea-label {
+      padding-right: 1rem;
+    }
+  }
+
+  textarea {
+    grid-column: 6 / -1;
+    border-radius: 4px;
+    padding: 6px;
+  }
+
+  button[type='submit'] {
+    grid-column: 5 / span 3;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 6px;
+    align-self: center;
+  }
+
+  @media screen and (min-width: 450px) {
+    button[type='submit'] {
+      grid-column: 6 / span 2;
+    }
   }
 }

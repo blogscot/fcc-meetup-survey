@@ -7,6 +7,11 @@
 
 body {
   background-color: #d1e7fa;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header h1 {
@@ -30,131 +35,19 @@ header #description {
 }
 
 form {
+  background-color: #fff;
   font-family: 'Roboto', 'Times New Roman', Times, serif;
   padding: 0;
 }
 
 @media screen and (min-width: 450px) {
   form {
+    border: rgba(40, 40, 40, 0.3) solid 1px;
+    border-radius: 8px;
+    margin: 2rem;
+    max-width: 600px;
     padding: 0 1.2rem;
   }
-}
-
-form section #checkbox-description,
-form section #radio-description {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1 / 5;
-  justify-self: flex-start;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding-right: 1rem;
-}
-
-form section #radio-description {
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 4;
-  grid-row: 5 / span 4;
-}
-
-form section #checkbox-description {
-  -ms-grid-row: 9;
-  -ms-grid-row-span: 2;
-  grid-row: 9 / span 2;
-}
-
-@media screen and (min-width: 450px) {
-  form section #checkbox-description,
-  form section #radio-description {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-    grid-column: 1 / span 5;
-  }
-}
-
-form section input[type='radio'],
-form section input[type='checkbox'] {
-  -ms-grid-column: 5;
-  grid-column: 5;
-  justify-self: flex-start;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-@media screen and (min-width: 450px) {
-  form section input[type='radio'],
-  form section input[type='checkbox'] {
-    -ms-grid-column: 6;
-    grid-column: 6;
-  }
-}
-
-form section #radio-label,
-form section #checkbox-label {
-  grid-column: 7 / -1;
-  justify-self: flex-start;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-left: -10px;
-}
-
-@media screen and (min-width: 450px) {
-  form section #radio-label,
-  form section #checkbox-label {
-    grid-column: 7 / -1;
-  }
-}
-
-form #textarea-label {
-  -ms-grid-row: 11;
-  -ms-grid-row-span: 4;
-  grid-row: 11 / span 4;
-  justify-self: flex-start;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-@media screen and (min-width: 450px) {
-  form #textarea-label {
-    padding-right: 1rem;
-  }
-}
-
-form textarea {
-  -ms-grid-row: 11;
-  -ms-grid-row-span: 4;
-  grid-row: 11 / span 4;
-  border-radius: 4px;
-  padding: 6px;
-  width: 100%;
-}
-
-form button[type='submit'] {
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 3;
-  grid-column: 5 / span 3;
-  border-radius: 4px;
-  font-size: 16px;
-  padding: 6px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-@media screen and (min-width: 450px) {
-  form button[type='submit'] {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 2;
-    grid-column: 6 / span 2;
-  }
-}
-
-section:not(#contact-info) {
-  visibility: hidden;
 }
 
 #contact-info {
@@ -163,17 +56,7 @@ section:not(#contact-info) {
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   grid-row-gap: 12px;
-  background-color: #fff;
-  padding: 1rem 1.6rem;
-}
-
-@media screen and (min-width: 450px) {
-  #contact-info {
-    max-width: 600px;
-    margin: 2rem auto;
-    border: rgba(40, 40, 40, 0.3) solid 1px;
-    border-radius: 8px;
-  }
+  padding: 2rem 1.6rem 1rem 1.6rem;
 }
 
 #contact-info label {
@@ -223,4 +106,133 @@ section:not(#contact-info) {
   grid-column: 6 / -1;
   font-size: 14px;
   height: 2rem;
+}
+
+#user-choices {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  grid-row-gap: 12px;
+}
+
+#user-choices #checkbox-description,
+#user-choices #radio-description {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-right: 1rem;
+}
+
+#user-choices #radio-description {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1 / span 4;
+}
+
+#user-choices #checkbox-description {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  grid-row: 5 / span 2;
+}
+
+@media screen and (min-width: 450px) {
+  #user-choices #checkbox-description,
+  #user-choices #radio-description {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / span 4;
+  }
+}
+
+#user-choices input[type='radio'],
+#user-choices input[type='checkbox'] {
+  -ms-grid-column: 5;
+  grid-column: 5;
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 450px) {
+  #user-choices input[type='radio'],
+  #user-choices input[type='checkbox'] {
+    -ms-grid-column: 6;
+    grid-column: 6;
+  }
+}
+
+#user-choices #radio-label,
+#user-choices #checkbox-label {
+  grid-column: 7 / -1;
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: -10px;
+}
+
+@media screen and (min-width: 450px) {
+  #user-choices #radio-label,
+  #user-choices #checkbox-label {
+    grid-column: 7 / -1;
+  }
+}
+
+#user-comments {
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  grid-row-gap: 12px;
+  padding-bottom: 2rem;
+}
+
+#user-comments #textarea-label {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / span 4;
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 450px) {
+  #user-comments #textarea-label {
+    padding-right: 1rem;
+  }
+}
+
+#user-comments textarea {
+  grid-column: 6 / -1;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+#user-comments button[type='submit'] {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-column: 5 / span 3;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 6px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 450px) {
+  #user-comments button[type='submit'] {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 2;
+    grid-column: 6 / span 2;
+  }
 }
