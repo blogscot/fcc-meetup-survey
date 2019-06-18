@@ -1,0 +1,223 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #d1e7fa;
+}
+
+#title {
+  text-align: center;
+  margin: 1.6rem 0.3rem 1.2rem 0.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  letter-spacing: 1.1px;
+}
+
+@media screen and (min-width: 450px) {
+  #title {
+    letter-spacing: initial;
+  }
+}
+
+main > #description {
+  text-align: center;
+  margin: 0.8rem;
+}
+
+form {
+  font-family: 'Roboto', 'Times New Roman', Times, serif;
+  padding: 0 1.2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (32px)[4] (32px)[6] (32px)[4];
+      grid-template-rows: repeat(4, 32px) repeat(6, 32px) repeat(4, 32px);
+  grid-auto-rows: 40px;
+  grid-row-gap: 8px;
+}
+
+@media screen and (min-width: 450px) {
+  form {
+    border: rgba(40, 40, 40, 0.3) solid 1px;
+    background-color: #fff;
+    max-width: 600px;
+    padding: 1rem 1.6rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+  }
+}
+
+form label {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  justify-self: flex-end;
+}
+
+@media screen and (min-width: 450px) {
+  form label {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1 / 6;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 8px;
+  }
+}
+
+form input,
+form textarea {
+  grid-column: 5 / -1;
+  font-size: 14px;
+  padding-left: 6px;
+}
+
+@media screen and (min-width: 450px) {
+  form input,
+  form textarea {
+    grid-column: 6 / -1;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  form #dropdown-label {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    justify-self: flex-end;
+  }
+}
+
+form select {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 4;
+  grid-column: 5 / span 4;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 450px) {
+  form select {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 4;
+    grid-column: 6 / span 4;
+  }
+}
+
+form #checkbox-description,
+form #radio-description {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-right: 1rem;
+}
+
+form #radio-description {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 4;
+  grid-row: 5 / span 4;
+}
+
+form #checkbox-description {
+  -ms-grid-row: 9;
+  -ms-grid-row-span: 2;
+  grid-row: 9 / span 2;
+}
+
+@media screen and (min-width: 450px) {
+  form #checkbox-description,
+  form #radio-description {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1 / span 5;
+  }
+}
+
+form input[type='radio'],
+form input[type='checkbox'] {
+  -ms-grid-column: 5;
+  grid-column: 5;
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 450px) {
+  form input[type='radio'],
+  form input[type='checkbox'] {
+    -ms-grid-column: 6;
+    grid-column: 6;
+  }
+}
+
+form #radio-label,
+form #checkbox-label {
+  grid-column: 7 / -1;
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: -10px;
+}
+
+@media screen and (min-width: 450px) {
+  form #radio-label,
+  form #checkbox-label {
+    grid-column: 7 / -1;
+  }
+}
+
+form #textarea-label {
+  -ms-grid-row: 11;
+  -ms-grid-row-span: 4;
+  grid-row: 11 / span 4;
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 450px) {
+  form #textarea-label {
+    padding-right: 1rem;
+  }
+}
+
+form textarea {
+  -ms-grid-row: 11;
+  -ms-grid-row-span: 4;
+  grid-row: 11 / span 4;
+  border-radius: 4px;
+  padding: 6px;
+  width: 100%;
+}
+
+form button[type='submit'] {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-column: 5 / span 3;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 6px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 450px) {
+  form button[type='submit'] {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 2;
+    grid-column: 6 / span 2;
+  }
+}
