@@ -11,82 +11,94 @@
       async
     />
     <link rel="stylesheet" href="src/css/style.css" async />
-    <title>Document</title>
+    <title>🇪🇸 Spanish Meetup Survey</title>
   </head>
   <body>
     <header>
-      <h1 id="title">Meetup Survey Form</h1>
-    </header>
-
-    <main>
+      <h1 id="title">Spanish Intercultural Meetup Survey</h1>
       <p id="description">
         We'd love to hear your suggestions for how we can improve future meetups
       </p>
+    </header>
 
+    <main>
       <form action="" method="" id="survey-form" rel="noreferrer">
-        <label id="name-label" for="name"><sup>*</sup>Name:</label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Enter your name"
-          autocomplete="off"
-          required
-        />
+        <section id="contact-info">
+          <label id="name-label" for="name"><sup>*</sup>Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Nombre"
+            autocomplete="off"
+            required
+          />
 
-        <label id="email-label" for="email"><sup>*</sup>Email:</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email address"
-          autocomplete="off"
-          required
-        />
-        <label id="number-label" for="number"><sup>*</sup>Number:</label>
-        <input
-          type="number"
-          id="number"
-          min="0"
-          max="10"
-          placeholder="Enter your number"
-          required
-        />
+          <label id="email-label" for="email"><sup>*</sup>Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Correo electrónico"
+            autocomplete="off"
+            required
+          />
+          <label id="number-label" for="number"><sup>*</sup>Phone:</label>
+          <input
+            type="number"
+            id="number"
+            min="0"
+            max="10"
+            placeholder="Número de teléfono"
+            required
+          />
 
-        <label id="dropdown-label" for="dropdown">Label text goes here</label>
-        <select name="" id="dropdown">
-          <option value="One">One</option>
-          <option value="Two">Two</option>
-          <option value="Three">Three</option>
-          <option value="Four">Four</option>
-          <option value="Five">Five</option>
-        </select>
+          <label id="dropdown-label" for="dropdown">Primary language</label>
+          <select name="primary-language" id="dropdown">
+            <option value="English">Inglés</option>
+            <option value="Spanish">Español</option>
+          </select>
 
-        <div id="radio-description">Write a description that goes here.</div>
-        <input type="radio" name="radio-group1" id="radio1" value="1" />
-        <label id="radio-label" for="radio1">Some text goes here</label>
-        <input type="radio" name="radio-group1" id="radio2" value="2" />
-        <label id="radio-label" for="radio2">Some text goes here</label>
-        <input type="radio" name="radio-group1" id="radio3" value="3" />
-        <label id="radio-label" for="radio3">Some text goes here</label>
-        <input type="radio" name="radio-group1" id="radio4" value="4" />
-        <label id="radio-label" for="radio4">Some text goes here</label>
-        <input type="checkbox" name="checkbox1" id="checkbox1" value="a" />
+          <label id="dropdown-label" for="language-level">Current Level</label>
 
-        <div id="checkbox-description">Write a description that goes here.</div>
-        <label id="checkbox-label" for="checkbox1">Some text goes here</label>
-        <input type="checkbox" name="checkbox1" id="checkbox2" value="b" />
-        <label id="checkbox-label" for="checkbox2">Some text goes here</label>
+          <select name="language-level" id="language-level">
+            <option value="Beginner">Principiante</option>
+            <option value="Intermediate">Intermedio</option>
+            <option value="Advanced">Advanzado</option>
+          </select>
+        </section>
 
-        <label id="textarea-label" for="comment-textarea"
-          >What would you like to tell us?</label
-        >
-        <textarea
-          name="comment-textarea"
-          id="comment-textarea"
-          cols="30"
-          rows="10"
-          placeholder="Any comments you'd like to add?"
-        ></textarea>
-        <button type="submit" id="submit">Submit</button>
+        <section id="user-choices">
+          <div id="radio-description">Write a description that goes here.</div>
+          <input type="radio" name="radio-group1" id="radio1" value="1" />
+          <label id="radio-label" for="radio1">Some text goes here</label>
+          <input type="radio" name="radio-group1" id="radio2" value="2" />
+          <label id="radio-label" for="radio2">Some text goes here</label>
+          <input type="radio" name="radio-group1" id="radio3" value="3" />
+          <label id="radio-label" for="radio3">Some text goes here</label>
+          <input type="radio" name="radio-group1" id="radio4" value="4" />
+          <label id="radio-label" for="radio4">Some text goes here</label>
+          <input type="checkbox" name="checkbox1" id="checkbox1" value="a" />
+
+          <div id="checkbox-description">
+            Write a description that goes here.
+          </div>
+          <label id="checkbox-label" for="checkbox1">Some text goes here</label>
+          <input type="checkbox" name="checkbox1" id="checkbox2" value="b" />
+          <label id="checkbox-label" for="checkbox2">Some text goes here</label>
+        </section>
+
+        <section id="user-comments">
+          <label id="textarea-label" for="comment-textarea"
+            >What would you like to tell us?</label
+          >
+          <textarea
+            name="comment-textarea"
+            id="comment-textarea"
+            cols="30"
+            rows="10"
+            placeholder="Any comments you'd like to add?"
+          ></textarea>
+          <button type="submit" id="submit">Submit</button>
+        </section>
       </form>
     </main>
 

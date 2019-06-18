@@ -8,138 +8,83 @@ body {
   background-color: hsl(208, 80%, 90%);
 }
 
-#title {
-  text-align: center;
-  margin: 1.6rem 0.3rem 1.2rem 0.3rem;
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  letter-spacing: 1.1px;
-}
-
-@media screen and (min-width: 450px) {
-  #title {
-    letter-spacing: initial;
+header {
+  h1 {
+    text-align: center;
+    margin: 3rem 0.3rem 2rem;
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    font-size: 32px;
+    letter-spacing: 1.1px;
+    @media screen and (min-width: 450px) {
+      color: red;
+      letter-spacing: initial;
+    }
   }
-}
 
-main > #description {
-  text-align: center;
-  margin: 0.8rem;
+  #description {
+    text-align: center;
+    margin: 0.8rem;
+  }
 }
 
 form {
   font-family: 'Roboto', 'Times New Roman', Times, serif;
-  padding: 0 1.2rem;
-
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, 32px) repeat(6, 32px) repeat(4, 32px);
-  grid-auto-rows: 40px;
-  grid-row-gap: 8px;
-
+  padding: 0;
   @media screen and (min-width: 450px) {
-    border: rgba(40, 40, 40, 0.3) solid 1px;
-    background-color: #fff;
-    max-width: 600px;
-    padding: 1rem 1.6rem;
-    border-radius: 8px;
-    margin: 2rem auto;
+    padding: 0 1.2rem;
   }
 
-  label {
-    grid-column: 1 / 4;
-    justify-self: flex-end;
-  }
-
-  @media screen and (min-width: 450px) {
-    label {
-      grid-column: 1 / 6;
-      align-self: center;
-      margin-right: 8px;
-    }
-  }
-
-  input,
-  textarea {
-    grid-column: 5 / -1;
-    font-size: 14px;
-    padding-left: 6px;
-  }
-
-  @media screen and (min-width: 450px) {
-    input,
-    textarea {
-      grid-column: 6 / -1;
-    }
-  }
-
-  @media screen and (max-width: 449px) {
-    #dropdown-label {
-      grid-column: 1 / 5;
-      justify-self: flex-end;
-    }
-  }
-
-  select {
-    grid-column: 5 / span 4;
-    font-size: 14px;
-  }
-
-  @media screen and (min-width: 450px) {
-    select {
-      grid-column: 6 / span 4;
-    }
-  }
-
-  #checkbox-description,
-  #radio-description {
-    grid-column: 1 / 5;
-    justify-self: flex-start;
-    align-self: center;
-    padding-right: 1rem;
-  }
-
-  #radio-description {
-    grid-row: 5 / span 4;
-  }
-
-  #checkbox-description {
-    grid-row: 9 / span 2;
-  }
-
-  @media screen and (min-width: 450px) {
+  section {
     #checkbox-description,
     #radio-description {
-      grid-column: 1 / span 5;
+      grid-column: 1 / 5;
+      justify-self: flex-start;
+      align-self: center;
+      padding-right: 1rem;
     }
-  }
 
-  input[type='radio'],
-  input[type='checkbox'] {
-    grid-column: 5;
-    justify-self: flex-start;
-    align-self: center;
-  }
+    #radio-description {
+      grid-row: 5 / span 4;
+    }
 
-  @media screen and (min-width: 450px) {
+    #checkbox-description {
+      grid-row: 9 / span 2;
+    }
+
+    @media screen and (min-width: 450px) {
+      #checkbox-description,
+      #radio-description {
+        grid-column: 1 / span 5;
+      }
+    }
+
     input[type='radio'],
     input[type='checkbox'] {
-      grid-column: 6;
+      grid-column: 5;
+      justify-self: flex-start;
+      align-self: center;
     }
-  }
 
-  #radio-label,
-  #checkbox-label {
-    grid-column: 7 / -1;
-    justify-self: flex-start;
-    align-self: center;
-    margin-left: -10px;
-  }
+    @media screen and (min-width: 450px) {
+      input[type='radio'],
+      input[type='checkbox'] {
+        grid-column: 6;
+      }
+    }
 
-  @media screen and (min-width: 450px) {
     #radio-label,
     #checkbox-label {
       grid-column: 7 / -1;
+      justify-self: flex-start;
+      align-self: center;
+      margin-left: -10px;
+    }
+
+    @media screen and (min-width: 450px) {
+      #radio-label,
+      #checkbox-label {
+        grid-column: 7 / -1;
+      }
     }
   }
 
@@ -174,5 +119,62 @@ form {
     button[type='submit'] {
       grid-column: 6 / span 2;
     }
+  }
+}
+
+// Contact Info
+
+section:not(#contact-info) {
+  visibility: hidden;
+}
+
+#contact-info {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-row-gap: 12px;
+  background-color: #fff;
+  padding: 1rem 1.6rem;
+  @media screen and (min-width: 450px) {
+    max-width: 600px;
+    margin: 2rem auto;
+    border: rgba(40, 40, 40, 0.3) solid 1px;
+    border-radius: 8px;
+  }
+
+  label {
+    grid-column: 1 / 6;
+    justify-self: flex-end;
+    margin-right: 1rem;
+    @media screen and (min-width: 450px) {
+      grid-column: 1 / 5;
+      align-self: center;
+      margin-right: 8px;
+    }
+  }
+
+  input {
+    height: 2rem;
+    grid-column: 6 / -1;
+    font-size: 14px;
+    padding-left: 6px;
+    width: 100%;
+    @media screen and (min-width: 450px) {
+      input {
+        grid-column: 6 / -1;
+      }
+    }
+
+    @media screen and (max-width: 449px) {
+      #dropdown-label {
+        grid-column: 1 / 5;
+        justify-self: flex-end;
+      }
+    }
+  }
+
+  select {
+    grid-column: 6 / -1;
+    font-size: 14px;
+    height: 2rem;
   }
 }
