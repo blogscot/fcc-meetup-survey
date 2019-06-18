@@ -24,7 +24,6 @@ header h1 {
 
 @media screen and (min-width: 450px) {
   header h1 {
-    color: red;
     letter-spacing: initial;
   }
 }
@@ -120,13 +119,22 @@ form {
 #user-choices #checkbox-description,
 #user-choices #radio-description {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1 / 5;
-  justify-self: flex-start;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / 6;
+  margin-left: 1rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   padding-right: 1rem;
+}
+
+@media screen and (min-width: 450px) {
+  #user-choices #checkbox-description,
+  #user-choices #radio-description {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / span 4;
+  }
 }
 
 #user-choices #radio-description {
@@ -141,31 +149,14 @@ form {
   grid-row: 5 / span 2;
 }
 
-@media screen and (min-width: 450px) {
-  #user-choices #checkbox-description,
-  #user-choices #radio-description {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
-    grid-column: 2 / span 4;
-  }
-}
-
 #user-choices input[type='radio'],
 #user-choices input[type='checkbox'] {
-  -ms-grid-column: 5;
-  grid-column: 5;
+  -ms-grid-column: 6;
+  grid-column: 6;
   justify-self: flex-start;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-@media screen and (min-width: 450px) {
-  #user-choices input[type='radio'],
-  #user-choices input[type='checkbox'] {
-    -ms-grid-column: 6;
-    grid-column: 6;
-  }
 }
 
 #user-choices #radio-label,
@@ -196,10 +187,10 @@ form {
 }
 
 #user-comments #textarea-label {
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 4;
-  grid-column: 2 / span 4;
-  justify-self: flex-start;
+  grid-column: 1 / span 4;
+  margin-left: 1rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -207,20 +198,29 @@ form {
 
 @media screen and (min-width: 450px) {
   #user-comments #textarea-label {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / span 4;
     padding-right: 1rem;
   }
 }
 
 #user-comments textarea {
-  grid-column: 6 / -1;
+  grid-column: 6 / -2;
   border-radius: 4px;
   padding: 6px;
 }
 
+@media screen and (min-width: 450px) {
+  #user-comments textarea {
+    grid-column: 6 / -1;
+  }
+}
+
 #user-comments button[type='submit'] {
-  -ms-grid-column: 5;
+  -ms-grid-column: 6;
   -ms-grid-column-span: 3;
-  grid-column: 5 / span 3;
+  grid-column: 6 / span 3;
   border-radius: 4px;
   font-size: 16px;
   padding: 6px;

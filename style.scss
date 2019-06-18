@@ -18,7 +18,6 @@ header {
     font-size: 32px;
     letter-spacing: 1.1px;
     @media screen and (min-width: 450px) {
-      color: red;
       letter-spacing: initial;
     }
   }
@@ -97,10 +96,13 @@ form {
   grid-row-gap: 12px;
   #checkbox-description,
   #radio-description {
-    grid-column: 1 / 5;
-    justify-self: flex-start;
+    grid-column: 1 / 6;
+    margin-left: 1rem;
     align-self: center;
     padding-right: 1rem;
+    @media screen and (min-width: 450px) {
+      grid-column: 2 / span 4;
+    }
   }
 
   #radio-description {
@@ -111,25 +113,11 @@ form {
     grid-row: 5 / span 2;
   }
 
-  @media screen and (min-width: 450px) {
-    #checkbox-description,
-    #radio-description {
-      grid-column: 2 / span 4;
-    }
-  }
-
   input[type='radio'],
   input[type='checkbox'] {
-    grid-column: 5;
+    grid-column: 6;
     justify-self: flex-start;
     align-self: center;
-  }
-
-  @media screen and (min-width: 450px) {
-    input[type='radio'],
-    input[type='checkbox'] {
-      grid-column: 6;
-    }
   }
 
   #radio-label,
@@ -138,11 +126,7 @@ form {
     justify-self: flex-start;
     align-self: center;
     margin-left: -10px;
-  }
-
-  @media screen and (min-width: 450px) {
-    #radio-label,
-    #checkbox-label {
+    @media screen and (min-width: 450px) {
       grid-column: 7 / -1;
     }
   }
@@ -157,33 +141,31 @@ form {
   grid-row-gap: 12px;
   padding-bottom: 2rem;
   #textarea-label {
-    grid-column: 2 / span 4;
-    justify-self: flex-start;
+    grid-column: 1 / span 4;
+    margin-left: 1rem;
     align-self: center;
-  }
-
-  @media screen and (min-width: 450px) {
-    #textarea-label {
+    @media screen and (min-width: 450px) {
+      grid-column: 2 / span 4;
       padding-right: 1rem;
     }
   }
 
   textarea {
-    grid-column: 6 / -1;
+    grid-column: 6 / -2;
     border-radius: 4px;
     padding: 6px;
+    @media screen and (min-width: 450px) {
+      grid-column: 6 / -1;
+    }
   }
 
   button[type='submit'] {
-    grid-column: 5 / span 3;
+    grid-column: 6 / span 3;
     border-radius: 4px;
     font-size: 16px;
     padding: 6px;
     align-self: center;
-  }
-
-  @media screen and (min-width: 450px) {
-    button[type='submit'] {
+    @media screen and (min-width: 450px) {
       grid-column: 6 / span 2;
     }
   }
