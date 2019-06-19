@@ -60,16 +60,24 @@ form {
     }
   }
 
+  select,
   input {
     height: 2rem;
     grid-column: 6 / -1;
-    font-size: 14px;
-    padding-left: 6px;
+    font-size: 16px;
+
     width: 100%;
-    @media screen and (min-width: 450px) {
-      input {
-        grid-column: 6 / -1;
-      }
+    background-color: #edf2f7;
+    border: 2px solid lightblue;
+    border-radius: 0.25rem;
+    line-height: 1.5;
+
+    &::placeholder {
+      color: rgba(40, 40, 40, 0.5);
+    }
+
+    &:hover {
+      background-color: #c9ddb8;
     }
 
     @media screen and (max-width: 449px) {
@@ -80,10 +88,39 @@ form {
     }
   }
 
-  select {
+  input {
+    padding: 0.75rem 1rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:optional:valid,
+    &:required {
+      border-left: 3px solid #689f38;
+    }
+
+    &:optional:invalid,
+    &:required:invalid {
+      border-left: 3px solid #e02006;
+    }
+
+    &:optional:focus,
+    &:required:invalid:focus {
+      border-left: 3px solid #6fc3c9;
+    }
+
+    &:required:invalid + .warning {
+      display: block;
+    }
+  }
+
+  .warning {
+    display: none;
     grid-column: 6 / -1;
-    font-size: 14px;
-    height: 2rem;
+    font-size: 13px;
+    color: red;
+    transform: translateY(-6px);
   }
 }
 
@@ -93,15 +130,15 @@ form {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-row-gap: 12px;
+  grid-row-gap: 3px;
   #checkbox-description,
   #radio-description {
     grid-column: 1 / 6;
     margin-left: 1rem;
-    align-self: center;
+    align-self: flex-start;
     padding-right: 1rem;
     @media screen and (min-width: 450px) {
-      grid-column: 2 / span 4;
+      grid-column: 1 / span 5;
     }
   }
 
@@ -145,7 +182,7 @@ form {
     margin-left: 1rem;
     align-self: center;
     @media screen and (min-width: 450px) {
-      grid-column: 2 / span 4;
+      grid-column: 1 / span 5;
       padding-right: 1rem;
     }
   }
@@ -153,6 +190,7 @@ form {
   textarea {
     grid-column: 6 / -2;
     border-radius: 4px;
+    font-size: 14px;
     padding: 6px;
     @media screen and (min-width: 450px) {
       grid-column: 6 / -1;
@@ -165,8 +203,14 @@ form {
     font-size: 16px;
     padding: 6px;
     align-self: center;
+    background-color: #4299e1;
+    border: 1px solid #2b6cb0;
+    color: white;
     @media screen and (min-width: 450px) {
       grid-column: 6 / span 2;
+    }
+    &:hover {
+      background-color: darken(#689f38, 8%);
     }
   }
 }
