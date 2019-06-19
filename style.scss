@@ -212,6 +212,7 @@ form {
   textarea {
     grid-column: 6 / -2;
     border-radius: 4px;
+    height: 10rem;
     font-size: 14px;
     padding: 6px;
     @media screen and (min-width: 450px) {
