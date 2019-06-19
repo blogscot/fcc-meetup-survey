@@ -17,8 +17,8 @@ body {
 header h1 {
   text-align: center;
   margin: 3rem 0.3rem 2rem;
-  font-family: 'Roboto', 'Times New Roman', Times, serif;
-  font-size: 32px;
+  font-family: 'Love Ya Like A Sister', 'Times New Roman', Times, serif;
+  font-size: 42px;
   letter-spacing: 1.1px;
 }
 
@@ -30,6 +30,7 @@ header h1 {
 
 header #description {
   text-align: center;
+  font-size: 20px;
   margin: 0.8rem;
 }
 
@@ -169,10 +170,12 @@ form {
 
 #user-choices {
   margin-top: 1.3rem;
+  border: 1px solid rgba(112, 128, 144, 0.33);
+  border-radius: 2px;
 }
 
 #user-choices div.question {
-  margin-top: 1rem;
+  padding: 0.5rem 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[12];
@@ -237,6 +240,19 @@ form {
   #user-choices div.question #checkbox-label {
     grid-column: 7 / -1;
   }
+}
+
+.question:nth-child(even) {
+  background: #e3eff0;
+}
+
+.question:nth-child(odd) {
+  background: #eaf3e6;
+}
+
+.question:last-child #radio-description {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
 }
 
 #user-comments {
