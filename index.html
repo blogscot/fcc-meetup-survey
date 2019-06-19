@@ -71,37 +71,174 @@
         </section>
 
         <section id="user-choices">
-          <div id="radio-description">
-            How often would you like the meetup to happen?
+          <div class="question">
+            <div id="radio-description">
+              How happy are you with the current meetup format?
+            </div>
+            <input
+              type="radio"
+              name="radio-group1"
+              id="radio1"
+              value="very-happy"
+            />
+            <label id="radio-label" for="radio1">Very happy</label>
+            <input type="radio" name="radio-group1" id="radio2" value="happy" />
+            <label id="radio-label" for="radio2">Happy</label>
+            <input
+              type="radio"
+              name="radio-group1"
+              id="radio3"
+              value="its-okay"
+            />
+            <label id="radio-label" for="radio3">It's okay</label>
+            <input
+              type="radio"
+              name="radio-group1"
+              id="radio3"
+              value="unhappy"
+            />
+            <label id="radio-label" for="radio3">Unhappy</label>
+            <input
+              type="radio"
+              name="radio-group1"
+              id="radio3"
+              value="stopped-coming"
+            />
+            <label id="radio-label" for="radio3">Stopped coming</label>
           </div>
-          <input type="radio" name="radio-group1" id="radio1" value="1" />
-          <label id="radio-label" for="radio1">Weekly</label>
-          <input type="radio" name="radio-group1" id="radio2" value="2" />
-          <label id="radio-label" for="radio2">Every two weeks</label>
-          <input type="radio" name="radio-group1" id="radio3" value="3" />
-          <label id="radio-label" for="radio3">Monthly</label>
 
-          <div id="checkbox-description">
-            What start time would suit you?
+          <div class="question">
+            <div id="radio-description">
+              How often should the meetup meet?
+            </div>
+            <input
+              type="radio"
+              name="radio-group2"
+              id="radio1"
+              value="weekly"
+            />
+            <label id="radio-label" for="radio1">Weekly</label>
+            <input
+              type="radio"
+              name="radio-group2"
+              id="radio2"
+              value="fortnightly"
+            />
+            <label id="radio-label" for="radio2">Fortnightly</label>
+            <input
+              type="radio"
+              name="radio-group2"
+              id="radio3"
+              value="monthly"
+            />
+            <label id="radio-label" for="radio3">Monthly</label>
           </div>
-          <input type="checkbox" name="checkbox" id="checkbox1" value="b" />
-          <label id="checkbox-label" for="checkbox">6pm</label>
-          <input type="checkbox" name="checkbox2" id="checkbox2" value="b" />
-          <label id="checkbox-label" for="checkbox2">7pm</label>
-          <input type="checkbox" name="checkbox3" id="checkbox3" value="b" />
-          <label id="checkbox-label" for="checkbox3">8pm</label>
+
+          <div class="question">
+            <div id="checkbox-description">
+              What time should the meetup begin? (Select all that suit)
+            </div>
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="checkbox1"
+              value="5to6"
+            />
+            <label id="checkbox-label" for="checkbox">5pm - 6pm</label>
+            <input
+              type="checkbox"
+              name="checkbox2"
+              id="checkbox2"
+              value="6to7"
+            />
+            <label id="checkbox-label" for="checkbox2">6pm - 7pm</label>
+            <input
+              type="checkbox"
+              name="checkbox3"
+              id="checkbox3"
+              value="7to8"
+            />
+            <label id="checkbox-label" for="checkbox3">7pm - 8pm</label>
+            <input
+              type="checkbox"
+              name="checkbox4"
+              id="checkbox4"
+              value="8to9"
+            />
+            <label id="checkbox-label" for="checkbox4">8pm - 9pm</label>
+          </div>
+
+          <div class="question">
+            <div id="checkbox-description">
+              What are your preferred days for the meetup? (Select all that
+              suit)
+            </div>
+            <input
+              type="checkbox"
+              name="day-checkbox1"
+              id="checkbox1"
+              value="Monday"
+            />
+            <label id="checkbox-label" for="checkbox">Monday</label>
+            <input
+              type="checkbox"
+              name="day-checkbox2"
+              id="checkbox2"
+              value="Tuesday"
+            />
+            <label id="checkbox-label" for="checkbox2">Tuesday</label>
+            <input
+              type="checkbox"
+              name="day-checkbox3"
+              id="checkbox3"
+              value="Wednesday"
+            />
+            <label id="checkbox-label" for="checkbox3">Wednesday</label>
+            <input
+              type="checkbox"
+              name="day-checkbox4"
+              id="checkbox4"
+              value="Thursday"
+            />
+            <label id="checkbox-label" for="checkbox4">Thursday</label>
+            <input
+              type="checkbox"
+              name="day-checkbox5"
+              id="checkbox5"
+              value="Friday"
+            />
+            <label id="checkbox-label" for="checkbox3">Friday</label>
+          </div>
+
+          <div class="question">
+            <div id="radio-description">
+              Should there be separate meetups sessions for each level of
+              learner?
+            </div>
+            <input type="radio" name="radio-group3" id="radio1" value="yes" />
+            <label id="radio-label" for="radio1">Yes</label>
+            <input type="radio" name="radio-group3" id="radio2" value="no" />
+            <label id="radio-label" for="radio2">No</label>
+            <input
+              type="radio"
+              name="radio-group3"
+              id="radio3"
+              value="dont-know"
+            />
+            <label id="radio-label" for="radio3">Don't Know</label>
+          </div>
         </section>
 
         <section id="user-comments">
           <label id="textarea-label" for="comment-textarea"
-            >What would you like to tell us?</label
+            >Any other comments?</label
           >
           <textarea
             name="comment-textarea"
             id="comment-textarea"
             cols="30"
             rows="10"
-            placeholder="Any comments you'd like to add?"
+            placeholder="Enter you comments here"
           ></textarea>
           <button type="submit" id="submit">Submit</button>
         </section>
