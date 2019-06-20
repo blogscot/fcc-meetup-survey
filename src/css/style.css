@@ -259,13 +259,19 @@ form {
 }
 
 #user-comments {
-  margin-top: 2rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-  grid-row-gap: 12px;
+  margin-top: 1rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 450px) {
+  #user-comments {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 12px;
+  }
 }
 
 #user-comments #textarea-label {
@@ -288,11 +294,18 @@ form {
 }
 
 #user-comments textarea {
-  grid-column: 6 / -2;
+  border: 1px solid rgba(40, 40, 40, 0.3);
   border-radius: 4px;
   height: 10rem;
   font-size: 14px;
   padding: 6px;
+}
+
+@media screen and (max-width: 450px) {
+  #user-comments textarea {
+    margin: 1rem;
+    width: 90vw;
+  }
 }
 
 @media screen and (min-width: 450px) {
@@ -302,9 +315,6 @@ form {
 }
 
 #user-comments button[type='submit'] {
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 3;
-  grid-column: 6 / span 3;
   border-radius: 4px;
   font-size: 16px;
   padding: 6px;
@@ -314,6 +324,12 @@ form {
   background-color: #4299e1;
   border: 1px solid #2b6cb0;
   color: white;
+}
+
+@media screen and (max-width: 450px) {
+  #user-comments button[type='submit'] {
+    margin-left: 1rem;
+  }
 }
 
 @media screen and (min-width: 450px) {
