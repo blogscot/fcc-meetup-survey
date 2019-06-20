@@ -175,59 +175,74 @@ form {
 }
 
 #user-choices div.question {
-  padding: 0.5rem 0;
+  border: rgba(40, 40, 40, 0.05) solid 1px;
+  background: #eaf3e6;
+  padding: 1rem 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-  grid-row-gap: 2px;
+}
+
+@media screen and (min-width: 450px) {
+  #user-choices div.question {
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 2px;
+  }
 }
 
 #user-choices div.question #checkbox-description,
 #user-choices div.question #radio-description {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1 / 5;
+  grid-column: 1 / -1;
   margin-left: 1rem;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  padding-right: 1rem;
+  margin-bottom: 1rem;
+  padding-right: 0.5rem;
 }
 
 @media screen and (min-width: 450px) {
   #user-choices div.question #checkbox-description,
   #user-choices div.question #radio-description {
+    padding-right: 1rem;
     -ms-grid-column: 1;
     -ms-grid-column-span: 5;
     grid-column: 1 / span 5;
   }
 }
 
-#user-choices div.question #radio-description {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
-  grid-row: 2 / span 3;
-}
-
-#user-choices div.question #checkbox-description {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 5;
-  grid-row: 2 / span 5;
+@media screen and (min-width: 450px) {
+  #user-choices div.question #radio-description {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
+    grid-row: 1 / span 5;
+  }
+  #user-choices div.question #checkbox-description {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
+    grid-row: 1 / span 5;
+  }
 }
 
 #user-choices div.question input[type='radio'],
 #user-choices div.question input[type='checkbox'] {
-  -ms-grid-column: 6;
-  grid-column: 6;
-  justify-self: flex-start;
+  -ms-grid-column: 3;
+  grid-column: 3;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
+@media screen and (min-width: 450px) {
+  #user-choices div.question input[type='radio'],
+  #user-choices div.question input[type='checkbox'] {
+    -ms-grid-column: 6;
+    grid-column: 6;
+  }
+}
+
 #user-choices div.question #radio-label,
 #user-choices div.question #checkbox-label {
-  grid-column: 7 / -1;
+  grid-column: 4 / -1;
   justify-self: flex-start;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -238,21 +253,9 @@ form {
 @media screen and (min-width: 450px) {
   #user-choices div.question #radio-label,
   #user-choices div.question #checkbox-label {
+    margin-left: -30px;
     grid-column: 7 / -1;
   }
-}
-
-.question:nth-child(even) {
-  background: #e3eff0;
-}
-
-.question:nth-child(odd) {
-  background: #eaf3e6;
-}
-
-.question:last-child #radio-description {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
 }
 
 #user-comments {

@@ -135,59 +135,61 @@ form {
   border-radius: 2px;
 
   div.question {
-    padding: 0.5rem 0;
+    border: rgba(40, 40, 40, 0.05) solid 1px;
+    background: #eaf3e6;
+    padding: 1rem 0;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-row-gap: 2px;
+    // @media screen and (max-width: 450px) {
+    //   grid-template-rows: 3rem;
+    // }
+    @media screen and (min-width: 450px) {
+      grid-template-columns: repeat(12, 1fr);
+      grid-row-gap: 2px;
+    }
 
     #checkbox-description,
     #radio-description {
-      grid-column: 1 / 5;
+      grid-column: 1 / -1;
       margin-left: 1rem;
-      align-self: flex-start;
-      padding-right: 1rem;
+      margin-bottom: 1rem;
+      padding-right: 0.5rem;
       @media screen and (min-width: 450px) {
+        padding-right: 1rem;
         grid-column: 1 / span 5;
       }
     }
-    #radio-description {
-      grid-row: 2 / span 3;
-    }
 
-    #checkbox-description {
-      grid-row: 2 / span 5;
+    @media screen and (min-width: 450px) {
+      #radio-description {
+        grid-row: 1 / span 5;
+      }
+
+      #checkbox-description {
+        grid-row: 1 / span 5;
+      }
     }
 
     input[type='radio'],
     input[type='checkbox'] {
-      grid-column: 6;
-      justify-self: flex-start;
+      grid-column: 3;
       align-self: center;
+      @media screen and (min-width: 450px) {
+        grid-column: 6;
+      }
     }
 
     #radio-label,
     #checkbox-label {
-      grid-column: 7 / -1;
+      grid-column: 4 / -1;
       justify-self: flex-start;
       align-self: center;
       margin-left: -10px;
       @media screen and (min-width: 450px) {
+        margin-left: -30px;
         grid-column: 7 / -1;
       }
     }
-  }
-}
-
-.question:nth-child(even) {
-  background: #e3eff0;
-}
-.question:nth-child(odd) {
-  background: #eaf3e6;
-}
-
-.question:last-child {
-  #radio-description {
-    transform: translateY(-0.5rem);
   }
 }
 
