@@ -156,8 +156,8 @@ form {
 
 #contact-info .warning {
   display: none;
-  font-size: 13px;
-  color: red;
+  font-size: 16px;
+  color: #d32f2f;
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
 }
@@ -316,13 +316,14 @@ form {
 
 #user-comments button[type='submit'] {
   border-radius: 4px;
-  font-size: 16px;
-  padding: 6px;
+  font-size: 18px;
+  padding: 0.5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  background-color: #4299e1;
-  border: 1px solid #2b6cb0;
+  background-color: #23669a;
+  -webkit-box-shadow: 3px 3px 6px 2px #00000048;
+          box-shadow: 3px 3px 6px 2px #00000048;
   color: white;
 }
 
@@ -358,7 +359,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: var(--footer-height);
+  height: 5rem;
   font-size: 0.8rem;
 }
 
