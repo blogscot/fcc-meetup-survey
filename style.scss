@@ -244,3 +244,17 @@ form {
     }
   }
 }
+
+// Footer
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: var(--footer-height);
+  font-size: 0.8rem;
+  p {
+    margin: 3px;
+  }
+}
