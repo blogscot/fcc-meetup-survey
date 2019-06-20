@@ -144,8 +144,8 @@ form {
       grid-row-gap: 2px;
     }
 
-    #checkbox-description,
-    #radio-description {
+    .checkbox-description,
+    .radio-description {
       grid-column: 1 / -1;
       margin-left: 1rem;
       margin-bottom: 1rem;
@@ -157,11 +157,11 @@ form {
     }
 
     @media screen and (min-width: 450px) {
-      #radio-description {
+      .radio-description {
         grid-row: 1 / span 5;
       }
 
-      #checkbox-description {
+      .checkbox-description {
         grid-row: 1 / span 5;
       }
     }
@@ -175,8 +175,8 @@ form {
       }
     }
 
-    #radio-label,
-    #checkbox-label {
+    .radio-label,
+    .checkbox-label {
       grid-column: 5 / -1;
       justify-self: flex-start;
       align-self: center;
