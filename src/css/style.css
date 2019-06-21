@@ -37,11 +37,14 @@ header #description {
 form {
   background-color: #fff;
   font-family: 'Roboto', 'Times New Roman', Times, serif;
+  font-size: 18px;
   padding: 0;
 }
 
 @media screen and (min-width: 450px) {
   form {
+    -webkit-box-shadow: 1px 4px 10px 1px #000c;
+            box-shadow: 1px 4px 10px 1px #000c;
     border: rgba(40, 40, 40, 0.3) solid 1px;
     border-radius: 8px;
     margin: 2rem;
@@ -89,8 +92,10 @@ form {
 
 #contact-info select,
 #contact-info input {
-  height: 2rem;
-  font-size: 16px;
+  height: 2.7rem;
+  -webkit-box-shadow: 1px 1px 3px -1px grey;
+          box-shadow: 1px 1px 3px -1px grey;
+  font-size: 20px;
   width: 100%;
   background-color: #edf2f7;
   border: 2px solid lightblue;
@@ -158,8 +163,9 @@ form {
   display: none;
   font-size: 16px;
   color: #d32f2f;
-  -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  margin-bottom: -8px;
 }
 
 @media screen and (min-width: 450px) {
@@ -171,6 +177,8 @@ form {
 #user-choices {
   margin-top: 1.3rem;
   border: 1px solid rgba(112, 128, 144, 0.33);
+  -webkit-box-shadow: 1px 1px 3px -1px grey;
+          box-shadow: 1px 1px 3px -1px grey;
   border-radius: 2px;
 }
 
@@ -182,14 +190,7 @@ form {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-}
-
-@media screen and (min-width: 450px) {
-  #user-choices div.question {
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
-    grid-row-gap: 2px;
-  }
+  grid-row-gap: 6px;
 }
 
 #user-choices div.question .checkbox-description,
@@ -230,6 +231,7 @@ form {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  justify-self: flex-start;
 }
 
 @media screen and (min-width: 450px) {
@@ -294,10 +296,12 @@ form {
 }
 
 #user-comments textarea {
+  -webkit-box-shadow: 1px 1px 3px -1px grey;
+          box-shadow: 1px 1px 3px -1px grey;
   border: 1px solid rgba(40, 40, 40, 0.3);
   border-radius: 4px;
   height: 10rem;
-  font-size: 14px;
+  font-size: inherit;
   padding: 6px;
 }
 
@@ -315,21 +319,20 @@ form {
 }
 
 #user-comments button[type='submit'] {
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 18px;
   padding: 0.5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   background-color: #23669a;
-  -webkit-box-shadow: 3px 3px 6px 2px #00000048;
-          box-shadow: 3px 3px 6px 2px #00000048;
   color: white;
 }
 
 @media screen and (max-width: 450px) {
   #user-comments button[type='submit'] {
     margin-left: 1rem;
+    width: 90vw;
   }
 }
 
@@ -349,6 +352,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -360,7 +364,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   height: 5rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 footer p {
